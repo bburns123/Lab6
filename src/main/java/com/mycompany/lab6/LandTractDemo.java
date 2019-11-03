@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package com.mycompany.lab6;
-
 import java.util.Scanner;
 
 /**
@@ -13,20 +12,24 @@ import java.util.Scanner;
  */
 public class LandTractDemo {
     public static void main(String[] args) {
-        LandTract landTractOne = new LandTract();
-        LandTract landTractTwo = new LandTract();
+        Scanner keyboard = new Scanner(System.in);
         
-        System.out.println("Please enter length and width");
-        double landTractOneArea = landTrackOne.Area();
-        double landTractTwoArea = landTrackTwo.Area();
+        LandTract landTrack1 = new LandTract();
+        LandTract landTrack2 = new LandTract();
         
-        System.out.println(landTractOne.toString());
-        System.out.println(landTractTwo.toString());
         
-        if(landTrackTwo.equalTo(landTrackOne)) {
-            System.out.println("The areas of the two land tracks are equal");
+        double area1 = landTrack1.Area();
+        double area2 = landTrack2.Area();
+        
+        
+        System.out.println("First land track: " + landTrack1.toString());
+        System.out.println("Second land track: " + landTrack2.toString());
+        
+        if (landTrack2.equals(landTrack1)) {
+            System.out.println("Both areas are the same.");
         }
         else
-            System.out.println("The areas of the two land tracks are NOT equal");
+          System.out.println("The areas are different.");
     }
+
 }
