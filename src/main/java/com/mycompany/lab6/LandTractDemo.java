@@ -12,24 +12,24 @@ import java.util.Scanner;
  */
 public class LandTractDemo {
     public static void main(String[] args) {
-        Scanner keyboard = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         
-        LandTract landTrack1 = new LandTract();
-        LandTract landTrack2 = new LandTract();
+        //Creates two separate land track objects, uses a scanner, and finds area
+        LandTract landTrackOne = new LandTract();
+        LandTract landTrackTwo = new LandTract();
+        double landTrackAreaOne = landTrackOne.Area();
+        double landTrackAreaTwo = landTrackTwo.Area();
         
+        //Prints length, width, and area
+        System.out.println("LAND TRACK ONE" + "\n" + "------------" + landTrackOne.toString());
+        System.out.println("LAND TRACK TWO" + "\n" + "------------" + landTrackTwo.toString());
         
-        double area1 = landTrack1.Area();
-        double area2 = landTrack2.Area();
-        
-        
-        System.out.println("First land track: " + landTrack1.toString());
-        System.out.println("Second land track: " + landTrack2.toString());
-        
-        if (landTrack2.equals(landTrack1)) {
-            System.out.println("Both areas are the same.");
+        //Finds if they are equal
+        if (landTrackTwo.equalTo(landTrackOne)) {
+            System.out.println("The areas are equal to one another");
         }
         else
-          System.out.println("The areas are different.");
+          System.out.println("The areas are NOT equal");
     }
 
 }
