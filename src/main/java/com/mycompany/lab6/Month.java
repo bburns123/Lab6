@@ -11,7 +11,7 @@ package com.mycompany.lab6;
  */
 public class Month {
     int monthNumber;
-    String[] monthName = {"n/a", "January", "Fenrury", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+    String[] monthName = {"n/a", "January", "Februry", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
     
     public int getMonthNumber() {
         return monthNumber;
@@ -26,13 +26,13 @@ public class Month {
     }
     
     public Month(int inMonthNumber) {
-        inMonthNumber = monthNumber;
+        monthNumber = inMonthNumber;
         if (monthNumber < 1 || monthNumber > 12) {
             inMonthNumber = 1;
         }
     }
     public void setMonthNumber(int inMonthNumber) {
-        inMonthNumber = monthNumber;
+        monthNumber = inMonthNumber;
         if (monthNumber < 1 || monthNumber > 12) {
             inMonthNumber = 1;
         }
